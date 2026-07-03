@@ -72,29 +72,29 @@ function playGame() {
     }
 
 }
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
-console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
 
     playRound(humanSelection, computerSelection);
- humanSelection = getHumanChoice();
- computerSelection = getComputerChoice();
- console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
 
     playRound(humanSelection, computerSelection);
-     humanSelection = getHumanChoice();
- computerSelection = getComputerChoice();
- console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
 
     playRound(humanSelection, computerSelection);
-     humanSelection = getHumanChoice();
- computerSelection = getComputerChoice();
- console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
 
     playRound(humanSelection, computerSelection);
-     humanSelection = getHumanChoice();
- computerSelection = getComputerChoice();
- console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    console.log(`You Selected: ${humanSelection}\nComputer Selected: ${computerSelection}`);
 
     playRound(humanSelection, computerSelection);
 
