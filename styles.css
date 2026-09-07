@@ -142,3 +142,31 @@ li {
     padding-top: var(--space-sm);
     font-size: var(--space-sm);
 }
+
+/* ------------------------------------- */
+
+.mainContainer {
+    background-color: white;
+    border-radius: 15px;
+    margin: var(--space-md);
+    padding: var(--space-md);
+
+}
+.fighterArena {
+    display: flex;
+    justify-content: space-around;
+}
+
+.humanFighterSide, .clashCenterIndicator, .skynetFighterSide {
+    text-align: center;
+}
+
+.clashCenterIndicator{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bannerContainer .text {
+    text-align: center;
+}
