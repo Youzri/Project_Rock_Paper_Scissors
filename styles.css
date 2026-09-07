@@ -106,12 +106,36 @@ li {
 
 }
 
-.scoreDynamic, .humanName, .player { 
+.scoreDynamic, .humanName { 
     color: var(--human-color);
     text-shadow: 0px 0px 10px var(--human-color);
 }
 
-.skynetName, .skynetScore, .aiCore {
+.skynetName, .skynetScore {
     color: var(--skynet-color);
     text-shadow: 0px 0px 10px var(--skynet-color);
+}
+
+
+.player, .aiCore {
+    color: var(--font-color1);
+    font-size: small;
+}
+
+.banner .text {
+    text-align: center;
+    margin-top: var(--space-sm);
+    color: var(--font-color1);
+    
+}
+
+.vs{
+    padding-bottom: var(--space-lg);
+    font-size: var(--space-md);
+    font-style: italic;
+}
+
+.rnd {
+    padding-top: var(--space-lg);
+    font-size: var(--space-sm);
 }
