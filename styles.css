@@ -1,0 +1,117 @@
+@layer  tokens, base, components, utilities;
+
+@layer reset {
+    *, *::before,*::after {
+        box-sizing: border-box;
+    }
+}
+
+* {
+    margin: 0;
+    
+}
+
+:root {
+    --font-primary: 'Nimbus Sans' , 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-secondary: 'Liberation Mono', 'Courier New', Courier, monospace;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 32px;
+    --background: linear-gradient(-90deg, #22d3ee, #e2e8f0);
+    --font-color1: gray; 
+    --font-color2: white;
+    --human-color: #22d3ee;
+    --skynet-color: #f43f5e;
+}
+
+body {
+    background: var(--background);
+}
+
+img, video, picture, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+
+.header {
+    display: flexbox;
+}
+
+.topNav {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--space-lg);
+}
+
+
+.statusBadge, .howtowin {
+    font: var(--font-secondary);
+}
+ 
+li {
+    list-style-type: none;
+}
+
+.statusBadge {
+    color: var(--font-color1);
+}
+
+.howtowin{ 
+    color: var(--font-color2);
+}
+
+/* ------------------------------------------------- */
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--space-md);
+}
+
+.humanSide, .vsDivision, .skynetSide {
+    text-align: center;
+}
+
+.mainScoreBoard {
+    background-color: white;
+    padding: var(--space-md);
+    border-radius: 15px;
+    margin: var(--space-md);
+    
+}
+
+.banner {
+    border-top: 1px solid lightgray;
+}
+
+.divider {
+    height: 40px;
+    width: 0px;
+    margin: 0 auto;
+    border-left: 2px solid gray;
+}
+
+.vsDivision {
+    margin: auto 0;
+}
+
+.scoreDynamic, .scoreDynamicSkynet {
+    font-size: 4em;
+    
+
+}
+
+.scoreDynamic, .humanName, .player { 
+    color: var(--human-color);
+    text-shadow: 0px 0px 10px var(--human-color);
+}
+
+.skynetName, .skynetScore, .aiCore {
+    color: var(--skynet-color);
+    text-shadow: 0px 0px 10px var(--skynet-color);
+}

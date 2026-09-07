@@ -5,34 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissor</title>
     <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <section class="gameContainer">
         <header class="header">
             <div class="topNav">
-                <div class="statusBadge"></div>
-                <div class="howtowin"></div>
+                <div class="statusBadge">
+                    <li>ARENA ONLINE</li>
+                </div>
+                <div class="howtowin">
+                    <li>FIRST TO 5 WINS</li>
+                </div>
             </div>
             <div class="mainScoreBoard">
                 <div class="scores">
-                    <div class="skynetSide">
-                        <div class="skynet name"></div>
-                        <div class="skynet score"></div>
-                        <div class="aiCore"></div>
+                    <div class="humanSide">
+                        
+                        <div class="humanName">
+                            <p>Human</p>
+                        </div>
+                        <div class="humanScore">
+                            <p class="scoreDynamic">0</p>
+                        </div>
+                        <div class="player">
+                            <p>Player</p>
+                        </div>  
                     </div>
                     <div class="vsDivision">
-                        <div class="vs"></div>
-                        <div class="divider"></div>
-                        <div class="roundNumber"></div>
+                        <div class="vs">
+                            <p>VS</p>
+                        </div>
+                        <div class="divider">
+                            <!-- <img src="" alt="A line to divide the page"> -->
+                        </div> 
+                        <div class="roundNumber">
+                            <p class="rnd">RND 1</p>
+                        </div>
                     </div>
-                    <div class="humanSide">
-                        <div class="human name"></div>
-                        <div class="human score"></div>
-                        <div class="player"></div>                        
+                    <div class="skynetSide">
+                        <div class="skynetName">
+                            <p>SKYNET</p>
+                        </div>
+                        <div class="skynetScore">
+                            <p class="scoreDynamicSkynet">0</p>
+                        </div>
+                        <div class="aiCore">
+                            <p>AI CORE</p>
+                        </div>
                     </div>
                 </div>
                 <div class="banner">
-                    <div class="text"></div>
+                    <div class="text">
+                        <p>Select Your Weapon To Strike First!</p>
+                    </div>
                 </div>
             </div>
         </header>
