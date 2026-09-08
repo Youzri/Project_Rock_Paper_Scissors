@@ -150,6 +150,7 @@ li {
     border-radius: 15px;
     margin: var(--space-md);
     padding: var(--space-md);
+    
 
 }
 .fighterArena {
@@ -170,3 +171,91 @@ li {
 .bannerContainer .text {
     text-align: center;
 }
+
+.humanWeapon, .skynetWeapon {
+    width: 150px;
+    
+}
+
+.humanIcon {
+    border: 2px solid teal;
+    border-radius: 15px;
+    width: 120px;
+    height: 120px;
+    margin-top: var(--space-sm);
+}
+
+.skynetIcon {
+    border: 2px solid red;
+    border-radius: 15px;
+    width: 120px;
+    height: 120px;
+    margin-top: var(--space-sm);
+}
+
+.humanWeapon {
+    transform: scaleX(-1);
+}
+
+.clashCircle {
+    background-color: black;
+    color: var(--font-color2);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+.clashCenterIndicator {
+    gap: var(--space-sm);
+}
+
+.standby {
+    font-size: small;
+    font-weight: 700;
+    color: var(--font-color1);
+}
+
+.human, .humanfightStatus {
+    color: var(--human-color);
+    font-weight: bold;
+}
+
+.humanfightStatus {
+    font-size: medium;
+    margin-top: var(--space-sm);
+    font-family: var(--font-secondary);
+
+}
+
+.skynet, .skynetfightStatus {
+    color: var(--skynet-color);
+    font-weight: bold;
+    
+}
+
+.skynetfightStatus {
+    font-size: medium;
+    margin-top: var(--space-sm);
+    font-family: var(--font-secondary);
+
+}
+
+.bannerContainer {
+    background-color: rgb(2, 2, 37);
+    padding: var(--space-sm);
+    color: var(--font-color2);
+    border-radius: 999px;
+}
+
+.clashBanner{
+    margin-top: var(--space-md);
+}
+
+
+/* ------------------------------------- */
