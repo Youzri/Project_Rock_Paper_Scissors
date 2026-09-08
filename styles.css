@@ -259,3 +259,57 @@ li {
 
 
 /* ------------------------------------- */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--space-md);
+    margin-top: var(--space-lg);
+    font-family: var(--font-secondary);
+}
+
+.left{
+    font-size: medium;
+    letter-spacing: 2px;
+    color: var(--font-color1);
+    font-weight: bold;
+}
+
+.right {
+    font-size: medium;
+    color: var(--font-color2);
+    font-weight: bold;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonCard {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--font-color1);
+    width: 250px;
+    height: 240px;
+    padding: var(--space-md);
+    border-radius: 30px;
+}
+
+.shape {
+    width: 150px;
+    margin: auto;
+       
+}
+
+.shapeName {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    color: var(--font-color2);
+    
+}
+
+.shapeAction {
+    font-size: small;
+}
