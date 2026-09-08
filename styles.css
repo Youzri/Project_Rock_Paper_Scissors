@@ -314,3 +314,70 @@ li {
     font-size: small;
     
 }
+
+/* -------------------------------------- */
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--space-lg);
+    background-color: var(--font-color2);
+    padding: var(--space-md);
+    margin: var(--space-md);
+    border-radius: 999px;
+    
+}
+
+.buttonLeft {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    flex-direction:row;
+    gap: 10px;
+    background-color: var(--human-color);
+    color: var(--font-color2);
+    padding: var(--space-sm);
+    border-radius: 999px;
+}
+
+.buttonMid {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--human-color);
+    color: var(--font-color2);
+    padding: var(--space-sm);
+    border-radius: 999px;
+}
+
+.buttonRight {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--human-color);
+    color: var(--font-color2);
+    padding: var(--space-sm);
+    border-radius: 999px;
+}
+
+.controls img {
+    width: 20px;
+}
+
+/* ----------------------------------- */
+
+.rightsReserved {
+    text-align: center;
+}
+
+.rightsReserved a {
+    text-decoration: none;
+    color: black;
+}
+
+.rightsReserved a:hover {
+    color: var(--skynet-color);
+    opacity: 0.7;
+}
