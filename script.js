@@ -105,40 +105,61 @@
 // (humanScore > computerScore) ? console.log("Horray!! You Win!") : console.log("Game Over Computer Wins!");
 
 let humanScore = document.querySelector(".scoreDynamic");
-let computerScore = document.querySelector("scoreDynamicSkynet");
+let computerScore = document.querySelector(".scoreDynamicSkynet");
 let currentRouns = document.querySelector(".rnd");
 let humanChoiceIcon = document.querySelector(".humanWeapon");
-let computerChoice = document.querySelector(".skynetWeapon");
+let computerChoiceIcon = document.querySelector(".skynetWeapon");
 let bannerMessage = document.querySelector(".bannerContainer .text");
 let weapons = document.querySelector(".weapons");
 let humanChoice = "";
-weapons.addEventListener('click', (e) => {
-    let className = e.target.className
-    // console.log(clickedButton);
-    // console.log(e.target.className);
-    switch (className) {
-        case "rockIcon":
-            humanChoice = "rock";
-            // console.log(humanChoice);
-            bannerMessage.textContent = "You Rock!!"
-            
-            break;
-        case "paperIcon":
-            humanChoice = "paper";
-            // console.log(humanChoice);
-            bannerMessage.textContent = "You Paper!!"
+let computerChoice = "";
+
+function playGame(humanChoice, computerChoice) {
 
 
-            break;
-        case "scissorsIcon":
-            humanChoice = "scissors"
-            bannerMessage.textContent = "You Scissors!!"
-            
+    weapons.addEventListener('click', (e) => {
+        let className = e.target.className
+        // console.log(clickedButton);
+        // console.log(e.target.className);
+        switch (className) {
+            case "rockIcon":
+                humanChoice = "rock";
+                // console.log(humanChoice);
+                bannerMessage.textContent = "You Rock!!"
+                
+                break;
+            case "paperIcon":
+                humanChoice = "paper";
+                // console.log(humanChoice);
+                bannerMessage.textContent = "You Paper!!"
 
-            break
-        default:
-            bannerMessage.textContent = "Please click on the weapon image to select a weapon!"
-            break;
-    }
-    
-})
+
+                break;
+            case "scissorsIcon":
+                humanChoice = "scissors"
+                bannerMessage.textContent = "You Scissors!!"
+                
+
+                break
+            default:
+                bannerMessage.textContent = "Please click on the weapon image to select a weapon!"
+                break;
+        }
+        let computerArray = ['rock', 'paper', 'scissors'];
+        let i =  Math.floor(Math.random()*computerArray.length);
+        computerChoice = computerArray[i];
+
+        if (humanChoice === computerChoice){
+            bannerMessage.textContent = "It's a tie."
+        } else if (humanChoice === 'rock' && computerChoice === 'scissors' || humanChoice === 'paper' && computerChoice === 'rock' || humanChoice === 'scissors' && computerChoice === 'paper') {
+            bannerMessage.textContent = "Humans Win!"
+            humanScore.textContent = parseInt(humanScore.textContent) + 1;
+
+        } else {
+            bannerMessage.textContent = "Skynet Wins!"
+            computerScore.textContent = parseInt(computerScore.textContent) + 1;
+        }
+    })
+}
+
+playGame();
