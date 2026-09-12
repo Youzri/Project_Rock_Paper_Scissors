@@ -106,18 +106,21 @@
 
 let humanScore = document.querySelector(".scoreDynamic");
 let computerScore = document.querySelector(".scoreDynamicSkynet");
-let currentRouns = document.querySelector(".rnd");
+let currentRound = document.querySelector(".num");
 let humanChoiceIcon = document.querySelector(".humanWeapon");
 let computerChoiceIcon = document.querySelector(".skynetWeapon");
 let bannerMessage = document.querySelector(".bannerContainer .text");
 let weapons = document.querySelector(".weapons");
 let humanChoice = "";
 let computerChoice = "";
+let isGameOver = false;
+let playAgain = document.querySelector(".playAgain");
 
 function playGame(humanChoice, computerChoice) {
 
 
     weapons.addEventListener('click', (e) => {
+        if (isGameOver) return;
         let className = e.target.className
         // console.log(clickedButton);
         // console.log(e.target.className);
@@ -143,15 +146,15 @@ function playGame(humanChoice, computerChoice) {
                 break
             default:
                 bannerMessage.textContent = "Please click on the weapon image to select a weapon!"
-                break;
+                return;
         }
-        let computerArray = ['rock', 'paper', 'scissors'];
+        let computerArray = ['rock', 'paper', 'scissors','rock', 'scissors', 'paper', 'scissors'];
         let i =  Math.floor(Math.random()*computerArray.length);
         computerChoice = computerArray[i];
 
         if (humanChoice === computerChoice){
             bannerMessage.textContent = "It's a tie."
-        } else if (humanChoice === 'rock' && computerChoice === 'scissors' || humanChoice === 'paper' && computerChoice === 'rock' || humanChoice === 'scissors' && computerChoice === 'paper') {
+        } else if ((humanChoice === 'rock' && computerChoice === 'scissors') || (humanChoice === 'paper' && computerChoice === 'rock') || (humanChoice === 'scissors' && computerChoice === 'paper')) {
             bannerMessage.textContent = "Humans Win!"
             humanScore.textContent = parseInt(humanScore.textContent) + 1;
 
@@ -159,7 +162,25 @@ function playGame(humanChoice, computerChoice) {
             bannerMessage.textContent = "Skynet Wins!"
             computerScore.textContent = parseInt(computerScore.textContent) + 1;
         }
+
+        if (parseInt(humanScore.textContent) >= 5) {
+            bannerMessage.textContent = "Humanity Prevails"
+            isGameOver = true;
+            playAgain.style.visibility = "visible";
+            return;
+        } else if (parseInt(computerScore.textContent) >= 5){
+            bannerMessage.textContent = "Skynet is Innivitabble, We Lost!"
+            isGameOver = true;
+            playAgain.style.visibility = "visible";
+            return;
+        } 
+             
+        
+        currentRound.textContent = parseInt(currentRound.textContent) + 1;
     })
 }
 
+playAgain.addEventListener('click', () => {
+    window.location.reload()
+})
 playGame();

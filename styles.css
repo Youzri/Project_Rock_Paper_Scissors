@@ -46,9 +46,19 @@ input, button, textarea, select {
 .topNav {
     display: flex;
     justify-content: space-between;
-    margin: 0 var(--space-lg);
+    margin: 10px var(--space-lg);
 }
 
+.playAgain {
+    border: none;
+    background-color: purple;
+    color: white;
+    font-size: larger;
+    padding: var(--space-sm);
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    visibility: hidden;
+}
 
 .statusBadge, .howtowin {
     font: var(--font-secondary);
